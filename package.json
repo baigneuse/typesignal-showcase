@@ -1,0 +1,28 @@
+{
+  "name": "typesignal-showcase",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Sanitized engineering and product case study: multilingual measurement, explainability and synthetic longitudinal comparison.",
+  "type": "module",
+  "engines": { "node": ">=24 <25" },
+  "scripts": {
+    "typecheck": "tsc --noEmit",
+    "lint": "eslint . --max-warnings 0",
+    "build": "tsc",
+    "test": "npm run build && node --test dist/tests/*.test.js && node --test scripts/*.test.mjs",
+    "demo": "npm run build && node dist/examples/synthetic-drift.js",
+    "check:public": "node scripts/check-public.mjs",
+    "check:history": "node scripts/check-public.mjs --history",
+    "check:links": "node scripts/check-links.mjs",
+    "verify": "npm run typecheck && npm run lint && npm test && npm run check:public && npm run check:links"
+  },
+  "devDependencies": {
+    "@eslint/js": "10.0.1",
+    "@types/node": "24.13.6",
+    "@typescript-eslint/eslint-plugin": "8.70.0",
+    "@typescript-eslint/parser": "8.70.0",
+    "eslint": "10.12.0",
+    "globals": "14.0.0",
+    "typescript": "5.9.3"
+  }
+}

@@ -1,0 +1,12 @@
+node_modules/
+dist/
+coverage/
+.env*
+.vercel/
+*.map
+*.pem
+*.key
+*.log
+*.pid
+*.tsbuildinfo
+.DS_Store
